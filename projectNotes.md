@@ -106,6 +106,10 @@ in teh adafruit code, when i set pixel 214 , the last light in the strand is set
 
 note that i can't actually see the first couple lights in the strand at index 0
 
+= need to get comms between the pi and arduino going
+	- [ ] https://www.arduino.cc/en/Reference/Firmata
+
+
 ## platform IO notes ##
 
 - make sure to either use the .ino extension for arduino code or include Arduino.h
