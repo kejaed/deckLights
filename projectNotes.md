@@ -112,6 +112,10 @@ note that i can't actually see the first couple lights in the strand at index 0
 	- [ ] https://github.com/FastLED/FastLED/wiki/Controlling-leds
 		- this has a bit at the end talking about "Read RGB Data From Serial" 
 	- [ ] https://github.com/FastLED/FastLED/wiki/Interrupt-problems
+	- [ ] https://github.com/adafruit/Adafruit_Lightship/blob/master/Arduino/OPCserver/OPCserver.ino
+		- what about using this open pixel control bit on the arduino?
+		- is there something for this that works over serial already for arduino
+		- it's nice about this particular link vs fadcandy that this is for one long strip whereas fadecandy has a limit to the max number of LEDs per strip.
 	
 
 
