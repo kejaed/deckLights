@@ -118,6 +118,8 @@ note that i can't actually see the first couple lights in the strand at index 0
 		- it's nice about this particular link vs fadcandy that this is for one long strip whereas fadecandy has a limit to the max number of LEDs per strip.
 	- fastLED resources
 		- [ ] https://github.com/atuline/FastLED-Demos
+			- specifically https://github.com/atuline/FastLED-Demos/blob/master/aalight/aalight.ino 
+				- this contains some keyboard command routines that could be useful to start from for the rpi-arduino work.
 		
 	
 
