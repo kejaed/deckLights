@@ -116,6 +116,9 @@ note that i can't actually see the first couple lights in the strand at index 0
 		- what about using this open pixel control bit on the arduino?
 		- is there something for this that works over serial already for arduino
 		- it's nice about this particular link vs fadcandy that this is for one long strip whereas fadecandy has a limit to the max number of LEDs per strip.
+	- fastLED resources
+		- [ ] https://github.com/atuline/FastLED-Demos
+		
 	
 
 
