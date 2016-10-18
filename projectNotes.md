@@ -120,6 +120,8 @@ note that i can't actually see the first couple lights in the strand at index 0
 		- [ ] https://github.com/atuline/FastLED-Demos
 			- specifically https://github.com/atuline/FastLED-Demos/blob/master/aalight/aalight.ino 
 				- this contains some keyboard command routines that could be useful to start from for the rpi-arduino work.
+				- worked on this to make it work with my setup (no ir remote, no button)
+				- [ ] need to change SERIAL_TIMEOUT to something longer, it's 5 msec now, it was not capturing the integers after the commands I was sending in.
 		
 	
 
