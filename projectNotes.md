@@ -106,6 +106,24 @@ in teh adafruit code, when i set pixel 214 , the last light in the strand is set
 
 note that i can't actually see the first couple lights in the strand at index 0
 
+- need to get comms between the pi and arduino going
+	- first step is simple brightness!
+	- [ ] https://www.arduino.cc/en/Reference/Firmata
+	- [ ] https://github.com/FastLED/FastLED/wiki/Controlling-leds
+		- this has a bit at the end talking about "Read RGB Data From Serial" 
+	- [ ] https://github.com/FastLED/FastLED/wiki/Interrupt-problems
+	- [ ] https://github.com/adafruit/Adafruit_Lightship/blob/master/Arduino/OPCserver/OPCserver.ino
+		- what about using this open pixel control bit on the arduino?
+		- is there something for this that works over serial already for arduino
+		- it's nice about this particular link vs fadcandy that this is for one long strip whereas fadecandy has a limit to the max number of LEDs per strip.
+	- fastLED resources
+		- [ ] https://github.com/atuline/FastLED-Demos
+			- specifically https://github.com/atuline/FastLED-Demos/blob/master/aalight/aalight.ino 
+				- this contains some keyboard command routines that could be useful to start from for the rpi-arduino work.
+		
+	
+
+
 ## platform IO notes ##
 
 - make sure to either use the .ino extension for arduino code or include Arduino.h
@@ -116,6 +134,11 @@ note that i can't actually see the first couple lights in the strand at index 0
 	- platformio run
 - upload
 	- platformio run --target upload
+- serial commands
+	- platformio serialports list
+	- platformio serialports monitor -b 57600
+
+
 
 
 ## git notes yet again ##
