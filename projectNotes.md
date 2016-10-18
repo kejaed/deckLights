@@ -134,12 +134,9 @@ note that i can't actually see the first couple lights in the strand at index 0
 	- platformio run
 - upload
 	- platformio run --target upload
-
-# list serial ports
-platformio serialports list
-
-# a Miniterm style serial port monitor ('ctrl+]' to quit)
-platformio serialports monitor
+- serial commands
+	- platformio serialports list
+	- platformio serialports monitor -b 57600
 
 
 
