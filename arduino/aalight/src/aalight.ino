@@ -1,4 +1,6 @@
 /*
+ 
+
 
 aalight led lighting effects for FastLED.
 
@@ -245,7 +247,7 @@ uint8_t IRProtocol = 0;
 
 // Serial definition
 #define SERIAL_BAUDRATE 57600                                 // Or 115200.
-#define SERIAL_TIMEOUT 5
+#define SERIAL_TIMEOUT 1000
 
 byte inbyte;                                                  // Serial input byte
 int thisarg;                                                  // Serial input argument
@@ -381,7 +383,7 @@ void setup() {
   LEDS.addLeds<LED_TYPE, LED_DT, COLOR_ORDER >(leds, NUM_LEDS); // WS2812B definition
 //  LEDS.addLeds<LED_TYPE, LED_DT, LED_CK, COLOR_ORDER >(leds, NUM_LEDS); // APA102 or WS2801 definition
   
-  set_max_power_in_volts_and_milliamps(5, 500);               //5V, 500mA
+  set_max_power_in_volts_and_milliamps(5, 5000);               //5V, 5000mA
 
   random16_set_seed(4832);                                    // Awesome randomizer
   random16_add_entropy(analogRead(2));
@@ -536,6 +538,25 @@ void readkeyboard() {                                         // PROCESS HARDWAR
     Serial.print("Serial read is: ");
     Serial.println(inbyte);
     switch(inbyte) {
+
+      case 91:                                                // left arrow
+        Serial.println("\t91 arrow");
+	inbyte = Serial.read();
+    Serial.print("\t 1. Serial read is: ");
+    Serial.println(inbyte);
+	if (inbyte == 67)
+        	Serial.println("\tLeft arrow");
+	if (inbyte == 68)
+        	Serial.println("\tRight arrow");
+	
+	while ( 255 != inbyte )
+	{
+		inbyte = Serial.read();
+    		Serial.print("\t 2. Serial read is: ");
+    		Serial.println(inbyte);
+	}
+		
+	break;
 
       case 59: break;                                         // BREAK IF INBYTE = ';'
 
