@@ -4,8 +4,8 @@
 #endif
 
 #define PIN 6
-//#define STRIP_BRIGHTNESS 100
-#define STRIP_BRIGHTNESS 0
+#define STRIP_BRIGHTNESS 100
+//#define STRIP_BRIGHTNESS 0
 #define NUM_LIGHTS 215
 
 // Parameter 1 = number of pixels in strip

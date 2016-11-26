@@ -549,7 +549,8 @@ void readkeyboard() {                                         // PROCESS HARDWAR
 	if (inbyte == 68)
         	Serial.println("\tRight arrow");
 	
-	while ( 255 != inbyte )
+	//while ( 255 != inbyte )
+	while (Serial.available() > 0 )
 	{
 		inbyte = Serial.read();
     		Serial.print("\t 2. Serial read is: ");
