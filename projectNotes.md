@@ -10,8 +10,8 @@
 ## November 26, 2016 ##
 
 - There are currently 2 PlatformIO projects in the top level arduino folder
-	- aalight is FastLED sample code that has serial keyboard built in and many demos
-	- simple is NeoPixel simple demo that we can use to just turn things on or off based on whatever we compile in.
+	- **aalight** is FastLED sample code that has serial keyboard built in and many demos
+	- **simple** is NeoPixel simple demo that we can use to just turn things on or off based on whatever we compile in.
 	
 	
 
