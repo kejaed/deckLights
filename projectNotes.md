@@ -2,7 +2,7 @@
 
 ## Top Level To Do List ##
 
-- [ ] Get arrow keys working to be able to find index of individual lights
+- [ ] Get j,k keys working to be able to find index of individual lights
 - [ ] Set up the idea of "Panels" so that lights hidden by fence posts or any others that we dont want on are disabled.
 - [ ] Set up rpi-ardunio keyboard comms via python script
 - [ ] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
@@ -13,6 +13,7 @@
 	- **aalight** is FastLED sample code that has serial keyboard built in and many demos
 	- **simple** is NeoPixel simple demo that we can use to just turn things on or off based on whatever we compile in.
 - PlatformIO has a [remote](http://docs.platformio.org/en/latest/plus/pio-remote.html) client where you can use that to upload to the device. Might want to use this so that the dev can happen on the laptop (compiling is slow on the rpi) and then send the arduino program to be uploaded.
+- not using arrow keys but j,k ascii codes 106 107 see that section in aalight
 	
 
 ## Prior to November 26, 2016 ##
