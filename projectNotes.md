@@ -1,5 +1,22 @@
 # Development Notes #
 
+## Top Level To Do List ##
+
+- [ ] Get arrow keys working to be able to find index of individual lights
+- [ ] Set up the idea of "Panels" so that lights hidden by fence posts or any others that we dont want on are disabled.
+- [ ] Set up rpi-ardunio keyboard comms via python script
+- [ ] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
+
+## November 26, 2016 ##
+
+- There are currently 2 PlatformIO projects in the top level arduino folder
+	- aalight is FastLED sample code that has serial keyboard built in and many demos
+	- simple is NeoPixel simple demo that we can use to just turn things on or off based on whatever we compile in.
+	
+	
+
+## Prior to November 26, 2016 ##
+
 - configured rpi to boot into X and auto login
 	- used the wiki to set this up
 - configured rpi to auto login to wifi
