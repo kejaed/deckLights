@@ -12,7 +12,7 @@
 - There are currently 2 PlatformIO projects in the top level arduino folder
 	- **aalight** is FastLED sample code that has serial keyboard built in and many demos
 	- **simple** is NeoPixel simple demo that we can use to just turn things on or off based on whatever we compile in.
-	
+- PlatformIO has a [remote](http://docs.platformio.org/en/latest/plus/pio-remote.html) client where you can use that to upload to the device. Might want to use this so that the dev can happen on the laptop (compiling is slow on the rpi) and then send the arduino program to be uploaded.
 	
 
 ## Prior to November 26, 2016 ##
