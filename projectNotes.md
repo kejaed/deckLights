@@ -5,8 +5,22 @@
 - [ ] Get j,k keys working to be able to find index of individual lights
 - [ ] Set up the idea of "Panels" so that lights hidden by fence posts or any others that we dont want on are disabled.
 - [ ] Set up rpi-ardunio keyboard comms via python script
-- [ ] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
+- [X] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
 
+## November 27, 2016 ##
+
+- at the end of last night got python scripts running to turn on and off the lights (send m1 and m0 to arduino over serial)
+- today got remi running with a button that will toggle the lights being on-off based on the baseline one button remi example
+- screen is running
+	- to start: screen
+	- to start and re-attach: screen -r
+	- screen commands start with ctrl-a
+		- d (detatch)
+		- c (create new screen window)
+		- n (next screen window)
+		- p (previous screen window)
+		- k (kill screen)
+	
 ## November 26, 2016 ##
 
 - There are currently 2 PlatformIO projects in the top level arduino folder
