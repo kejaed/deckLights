@@ -383,7 +383,7 @@ void setup() {
   LEDS.addLeds<LED_TYPE, LED_DT, COLOR_ORDER >(leds, NUM_LEDS); // WS2812B definition
 //  LEDS.addLeds<LED_TYPE, LED_DT, LED_CK, COLOR_ORDER >(leds, NUM_LEDS); // APA102 or WS2801 definition
   
-  set_max_power_in_volts_and_milliamps(5, 5000);               //5V, 5000mA
+  //set_max_power_in_volts_and_milliamps(5, 5000);               //5V, 5000mA
 
   random16_set_seed(4832);                                    // Awesome randomizer
   random16_add_entropy(analogRead(2));

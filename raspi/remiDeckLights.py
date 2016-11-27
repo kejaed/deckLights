@@ -17,6 +17,8 @@ from remi import start, App
 
 import serial
 import sys
+import webcolors
+import colorsys
 
 class MyApp(App):
     def __init__(self, *args):
@@ -42,21 +44,53 @@ class MyApp(App):
 	hello = self.ser.readline()
 	self.ser.write(b'm0')
 
+        
         bt.set_on_click_listener(self.on_button_pressed, lbl)
         bt.set_on_mousedown_listener(self.on_button_mousedown, 'data1', 2,'three')
         
+        self.colorPicker = gui.ColorPicker('#ffbb00', width=200, height=20, margin='10px')
+        self.colorPicker.set_on_change_listener(self.color_picker_changed,lbl)
+
+
         #this will never be called, can't register an event more than one time
         bt.set_on_mouseup_listener(self.on_button_mouseup, 'data1') 
+
+	self.slider = gui.Slider(128, 0, 255, 1, width=200, height=20, margin='10px')
+	self.slider.set_on_change_listener(self.slider_changed)
 
         # appending a widget to another, the first argument is a string key
         wid.append(lbl)
         wid.append(bt)
-
+        wid.append(self.colorPicker)
+	wid.append(self.slider)
         # returning the root widget
         return wid
 
+    def slider_changed(self, widget, value):
+        brightness = "b" + str(int(value))
+	print "\n\n\nBrightness " + brightness
+	self.ser.write(brightness)
+
+    def setHue(self, hue):
+	hueStr = 'a' + str(int(hue))
+	print "\n\n\nHueStr " + hueStr
+	self.ser.write(hueStr)
+
+    def color_picker_changed(self, widget, value,lbl):
+        hexValue = value
+	rgbValue = webcolors.hex_to_rgb(hexValue)
+	hsvValue = colorsys.rgb_to_hsv(rgbValue[0]/255.0,rgbValue[1]/255.0,rgbValue[2]/255.0)
+	hue = round(hsvValue[0] * 255)
+	print hexValue , rgbValue , hsvValue, hue	
+        lbl.set_text('New color value: ' + value )
+        self.setHue(hue)
+
 # have a readline here to wait for the arduino to write "---SETUP COMPLETE---" 
 # before we continue with the program
+
+
+        
+        
     def lightsOn(self):
         #ser = serial.Serial('/dev/ttyACM0',57600,timeout=5)
 	#hello = self.ser.readline()
@@ -95,5 +129,5 @@ if __name__ == "__main__":
     # starts the webserver
     # optional parameters
     # start(MyApp,address='127.0.0.1', port=8081, multiple_instance=False,enable_file_cache=True, update_interval=0.1, start_browser=True)
-    #start(MyApp, debug=True,address='0.0.0.0',port=80)
-    start(MyApp,address='0.0.0.0',port=80)
+    start(MyApp, debug=True,address='0.0.0.0',port=80)
+    #start(MyApp,address='0.0.0.0',port=80)
