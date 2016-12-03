@@ -7,6 +7,13 @@
 - [ ] Set up rpi-ardunio keyboard comms via python script
 - [X] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
 
+
+## December 3, 2016 ##
+
+- based on http://deddieslab.blogspot.ca/2014/08/pi-files-frontdoor-light-switch-based.html using pyephem to determine sunrise / sundown for the lights to come on
+- pip install pyephem
+- rewired the rpi to run off of the 5V supply. so with this the arduino runs off of USB power from rpi so we only need to plug in the power supply so we remove the power bar in the box. 
+
 ## November 27, 2016 ##
 
 - at the end of last night got python scripts running to turn on and off the lights (send m1 and m0 to arduino over serial)
