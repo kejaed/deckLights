@@ -4,7 +4,7 @@
 
 - [ ] Get j,k keys working to be able to find index of individual lights
 - [ ] Set up the idea of "Panels" so that lights hidden by fence posts or any others that we dont want on are disabled.
-- [ ] Set up rpi-ardunio keyboard comms via python script
+- [X] Set up rpi-ardunio serial comms via python script
 - [X] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
 
 
