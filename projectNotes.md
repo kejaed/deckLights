@@ -6,6 +6,20 @@
 - [ ] Set up the idea of "Panels" so that lights hidden by fence posts or any others that we dont want on are disabled.
 - [X] Set up rpi-ardunio serial comms via python script
 - [X] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
+- [ ] Set up rpi ping service to notify me if it goes offline
+
+## December 11, 2016 ##
+
+- wifi still kept dropping out even with the new power supply
+- got a [new wifi dongle from amazon](https://www.amazon.ca/gp/product/B019SRBUNG/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1) that has an antenna
+- it needed a new wifi driver for the rpi, which after a bunch of searching around, there's a guy who compiles them for specific kernel versions and made a [script for it](https://www.raspberrypi.org/forums/viewtopic.php?f=45&t=103989&p=1076518&hilit=8192eu#p1076518):
+
+		
+		wget https://dl.dropboxusercontent.com/u/80256631/install-wifi.tar.gz
+		tar xzf install-wifi.tar.gz
+		./install-wifi -h
+		
+- rpi is now back in the yard, wifi driver installed, and the connection seems speedy. fingers crossed that it lasts!
 
 
 ## December 3, 2016 ##
