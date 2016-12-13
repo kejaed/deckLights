@@ -456,6 +456,21 @@ void change_mode(int newMode, int mc){                        // mc stands for '
     case 39: if(mc) {thisdelay=20; thishue = 20;} confetti(); break;
     case 40: if(mc) {thisdelay=20; thishue = 50;} sinelon(); break;
     case 41: if(mc) {thisdelay=10;} juggle(); break;
+    case 42: if(mc){
+	for (int k=0; k<NUM_LEDS-1; k++) {
+    
+		if (k%2)
+			leds[k] = CHSV(1, 255, 255);
+		else
+			leds[k] = CHSV(100, 255, 255);
+		LEDS.show();
+	}
+	}
+	LEDS.show(); 
+	break;
+
+        
+    
 
     // DEMO MODE
     case 99: demo_modeA(); break;

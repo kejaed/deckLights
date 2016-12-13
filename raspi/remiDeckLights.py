@@ -42,7 +42,7 @@ class MyApp(App):
         self.ser = serial.Serial('/dev/ttyACM0',57600,timeout=1)
 	hello = self.ser.readline()
 	hello = self.ser.readline()
-	self.ser.write(b'm0')
+	self.ser.write(b'm42')
 
         
         bt.set_on_click_listener(self.on_button_pressed, lbl)
@@ -72,6 +72,7 @@ class MyApp(App):
 	self.ser.write(brightness)
 
     def setHue(self, hue):
+	self.ser.write(b'm1')
 	hueStr = 'a' + str(int(hue))
 	print "\n\n\nHueStr " + hueStr
 	self.ser.write(hueStr)
@@ -94,7 +95,7 @@ class MyApp(App):
     def lightsOn(self):
         #ser = serial.Serial('/dev/ttyACM0',57600,timeout=5)
 	#hello = self.ser.readline()
-	self.ser.write(b'm1')
+	self.ser.write(b'm42')
 	#ser.close()
 
     def lightsOff(self):
