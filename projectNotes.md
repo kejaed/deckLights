@@ -8,6 +8,12 @@
 - [X] Get Remi working on rpi to control LEDs (on/off, brightness, colours)
 - [ ] Set up rpi ping service to notify me if it goes offline
 
+## December 12, 2016 ##
+
+- added a mode m42 to the aalight code to make alternating red and green lights
+- updated remi to start up with m42 and set m42 each time the button to turn on is pressed
+- if a colour is set then it will print all white to the strip then set the colour
+
 ## December 11, 2016 ##
 
 - wifi still kept dropping out even with the new power supply
